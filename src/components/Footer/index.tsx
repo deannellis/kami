@@ -4,6 +4,9 @@ import Icon from "../Icon";
 
 const Footer = () => (
   <footer className="footer">
+    <div className="footer__left">
+      <Icon />
+    </div>
     <div className="footer__copyright">
       © Dean Nellis {new Date().getFullYear()}
     </div>

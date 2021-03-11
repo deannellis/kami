@@ -1,6 +1,9 @@
 import React from "react";
 
-export default (title) => {
+// type getPathsProps = {title: } 
+// interface PathOptions  { title:  "Kami Logo" | "Facebook Logo"};
+
+const getPaths = (title: string): JSX.Element => {
   switch (title) {
     case "Kami Logo":
       return (
@@ -14,3 +17,5 @@ export default (title) => {
       return <></>;
   }
 };
+
+export default getPaths;

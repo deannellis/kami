@@ -11,5 +11,12 @@
 		"browser": true,
 		"es6": true,
 		"jest": true
-	}
+	},
+    "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+        "react/require-default-props": [0],
+        "import/no-unresolved": [0],
+        "import/extensions": [1, {"tsx": "always"}],
+        "no-extra-boolean-cast": [0]
+      }
 }

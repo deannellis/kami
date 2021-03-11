@@ -1,9 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import getPaths from "./paths";
 
-const Icon = ({ size, title }) => (
+type IconProps = {
+  size?: number,
+  title?: string
+}
+
+const Icon = ({size = 32, title = "Kami Logo"}: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -15,13 +19,5 @@ const Icon = ({ size, title }) => (
     {getPaths(title)}
   </svg>
 );
-Icon.defaultProps = {
-  fill: "#000",
-  size: 32,
-};
-Icon.propTypes = {
-  fill: PropTypes.string,
-  size: PropTypes.number,
-};
 
 export default Icon;
