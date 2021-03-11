@@ -5,4 +5,17 @@ footer.footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: space-between;
+  svg {
+    fill: #fff;
+  }
+}
+
+.footer__copyright {
+  flex-grow: 1;
+  text-align: center;
+}
+.footer__right,
+.footer__left {
+  padding: 0 var(--m-size);
 }
