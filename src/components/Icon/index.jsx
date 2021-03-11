@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import getPaths from "./paths";
 
-export const Icon = ({ fill, size, title }) => (
+const Icon = ({ size, title }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
