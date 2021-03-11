@@ -1,0 +1,10 @@
+@import "./values.scss";
+@import "./global.scss";
+@import "./utils.scss";
+
+// SHARED
+@import "./shared/button.scss";
+
+// COMPONENTS
+@import "../components/Header/style.scss";
+@import "../components/PageLayout/style.scss";

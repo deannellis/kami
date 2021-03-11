@@ -1,0 +1,35 @@
+// https://www.happyhues.co/palettes/3
+
+// COLOR VALUES
+$light-blue--tint-15: #f6f9fb;
+$light-blue--tint-25: #edf4f6;
+$light-blue--tint-25: #edf4f6;
+$light-blue--tint-50: #d7e5eb;
+$dark-blue: #094067;
+$gray-blue: #aabeca;
+$dark-gray-blue: #364852;
+$bright-blue: #3da9fc;
+
+:root {
+  // COLOR APPLICATION
+  --background-color: #{$light-blue--tint-15};
+  --background-color--secondary: #fff;
+  --header-color: #{$dark-blue};
+  --button-color: #{$gray-blue};
+  --button-color--primary: #{$bright-blue};
+  --button-text-color: #{$dark-gray-blue};
+  --button-text-color--primary: #fff;
+  --main-accent-color: #{$bright-blue};
+
+  // SIZES
+  --xs-size: 1rem;
+  --s-size: 1.2rem;
+  --m-size: 1.6rem;
+  --l-size: 3.2rem;
+  --xl-size: 4.8rem;
+  --radius: 4px;
+
+  // FONTS
+  --display-font: "Mulish", sans-serif;
+  --body-font: "Roboto", sans-serif;
+}

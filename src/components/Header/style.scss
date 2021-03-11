@@ -1,0 +1,11 @@
+header.header {
+  min-height: 7.2rem;
+  background-color: var(--background-color--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--m-size);
+  li {
+    list-style: none;
+  }
+}
