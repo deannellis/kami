@@ -20,6 +20,7 @@ $bright-blue: #3da9fc;
   --button-text-color: #{$dark-gray-blue};
   --button-text-color--primary: #fff;
   --main-accent-color: #{$bright-blue};
+  --footer-background-color: #{$dark-blue};
 
   // SIZES
   --xs-size: 1rem;
@@ -33,3 +34,7 @@ $bright-blue: #3da9fc;
   --display-font: "Mulish", sans-serif;
   --body-font: "Roboto", sans-serif;
 }
+
+// COMPONENT HEIGHT
+$header-height: 7.2rem;
+$footer-height: 6.4rem;

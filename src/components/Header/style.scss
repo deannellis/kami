@@ -1,10 +1,11 @@
 header.header {
-  min-height: 7.2rem;
+  height: $header-height;
   background-color: var(--background-color--secondary);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--m-size);
+  box-shadow: $depth-1;
   li {
     list-style: none;
   }

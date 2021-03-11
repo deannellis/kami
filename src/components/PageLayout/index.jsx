@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Footer";
 import Header from "../Header";
 
 const PageLayout = ({ children, layout }) => {
@@ -8,7 +9,7 @@ const PageLayout = ({ children, layout }) => {
       <main className={!!layout ? `page-layout--${layout}` : "page-layout"}>
         {children}
       </main>
-      <footer>footer</footer>
+      <Footer />
     </>
   );
 };

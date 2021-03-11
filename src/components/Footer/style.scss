@@ -1,0 +1,8 @@
+footer.footer {
+  min-height: $footer-height;
+  background: var(--footer-background-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
