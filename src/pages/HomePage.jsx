@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import PageLayout from "../components/PageLayout";
 import Modal from "../components/Modal";
+import SampleForm from "../components/Forms/SampleForm";
 
 const HomePage = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -43,7 +44,7 @@ const HomePage = () => {
           </button>
         </div>
       </Modal>
-      <h1>Elements</h1>
+      <h1>UI Elements</h1>
       <h2>Buttons</h2>
       <div className="buttons">
         <button className="button" type="button">
@@ -69,6 +70,9 @@ const HomePage = () => {
       >
         Open Modal
       </button>
+      <h1>Form Elements</h1>
+      <h2>Sample Form</h2>
+      <SampleForm />
     </PageLayout>
   );
 };

@@ -17,6 +17,12 @@
         "react/require-default-props": [0],
         "import/no-unresolved": [0],
         "import/extensions": [1, {"tsx": "always"}],
-        "no-extra-boolean-cast": [0]
+        "no-extra-boolean-cast": [0],
+        "react/jsx-props-no-spreading": [
+			"error",
+			{
+				"exceptions": ["input", "select"]
+			}
+		],
       }
 }

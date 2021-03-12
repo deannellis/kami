@@ -28,7 +28,7 @@
   padding: 0 var(--m-size);
   font-weight: 800;
   font-size: 1.8rem;
-  border-bottom: 1px solid $dark-gray-blue--72;
+  border-bottom: 1px solid var(--border-color);
 }
 .modal__content {
   padding: 0 var(--m-size) var(--s-size);
@@ -37,7 +37,7 @@
   display: flex;
   justify-content: flex-end;
   padding: var(--s-size) var(--m-size);
-  border-top: 1px solid $dark-gray-blue--72;
+  border-top: 1px solid var(--border-color);
   button {
     margin-left: var(--s-size);
   }

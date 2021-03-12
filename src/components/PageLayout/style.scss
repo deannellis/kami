@@ -4,4 +4,7 @@ main {
 
 .page-layout {
   padding: var(--m-size) var(--m-size) var(--l-size);
+  h1:not(:first-child) {
+    margin-top: var(--xl-size);
+  }
 }

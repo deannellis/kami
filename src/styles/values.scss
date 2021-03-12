@@ -11,18 +11,24 @@ $gray-blue: #aabeca;
 $dark-gray-blue: #364852;
 $dark-gray-blue--72: #364852b8;
 $bright-blue: #3da9fc;
+$red: #ef4565;
 
 :root {
+  //COLOR ROLES
+  --main-accent-color: #{$bright-blue};
+  --secondary-accent-color: #{$gray-blue};
+  --danger-color: #{$red};
+
   // COLOR APPLICATION
   --background-color: #{$light-blue--tint-15};
   --background-color--secondary: #fff;
   --header-color: #{$dark-blue};
   --button-color: #{$gray-blue};
-  --button-color--primary: #{$bright-blue};
+  --button-color--primary: var(--main-accent-color);
   --button-text-color: #{$dark-gray-blue};
   --button-text-color--primary: #fff;
-  --main-accent-color: #{$bright-blue};
   --footer-background-color: #{$dark-blue};
+  --border-color: #{$dark-gray-blue--72};
 
   // SIZES
   --xs-size: 1rem;
