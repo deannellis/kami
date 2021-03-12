@@ -5,7 +5,15 @@ $depth-3: 0 10px 20px rgba(29, 29, 37, 0.19), 0 6px 6px rgba(29, 29, 37, 0.23);
 $depth-4: 0 14px 28px rgba(29, 29, 37, 0.25), 0 10px 10px rgba(29, 29, 37, 0.22);
 $depth-5: 0 19px 38px rgba(29, 29, 37, 0.3), 0 15px 12px rgba(29, 29, 37, 0.22);
 
-// LINE HEIGHT
+// TYPOGRAPHY
+// Truncate Text
+@mixin truncated($width) {
+  width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+// Line height
 $leading-none: 1;
 $leading-tight: 1.25;
 $leading-snug: 1.375;
