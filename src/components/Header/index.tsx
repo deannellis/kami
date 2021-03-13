@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Icon from "../Icon";
 
@@ -7,7 +8,12 @@ const Header = () => (
     <Icon size={32} title="Kami Logo" />
     <nav>
       <ul>
-        <li>Home</li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/theme">Theme</Link>
+        </li>
       </ul>
     </nav>
   </header>

@@ -5,12 +5,14 @@ $light-blue--tint-15: #f6f9fb;
 $light-blue--tint-25: #edf4f6;
 $light-blue--tint-25: #edf4f6;
 $light-blue--tint-50: #d7e5eb;
+$bright-blue: #3da9fc;
 $dark-blue: #094067;
 $dark-blue--72: #094067b8;
 $gray-blue: #aabeca;
 $dark-gray-blue: #364852;
 $dark-gray-blue--72: #364852b8;
-$bright-blue: #3da9fc;
+$gray: #5f6c7b;
+$dark-gray: #202325;
 $red: #ef4565;
 
 :root {
@@ -29,6 +31,7 @@ $red: #ef4565;
   --button-text-color--primary: #fff;
   --footer-background-color: #{$dark-blue};
   --border-color: #{$dark-gray-blue--72};
+  --text-color: #{$dark-gray};
 
   // SIZES
   --xs-size: 1rem;
@@ -36,6 +39,7 @@ $red: #ef4565;
   --m-size: 1.6rem;
   --l-size: 3.2rem;
   --xl-size: 4.8rem;
+
   --radius: 4px;
 
   // FONTS

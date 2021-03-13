@@ -18,7 +18,9 @@ const Checkbox = ({ children, ...props }: CheckboxProps) => {
       </label>
       {meta.touched && meta.error ? (
         <div className="input__error">{meta.error}</div>
-      ) : null}
+      ) : (
+        <div className="input__helper-text" />
+      )}
     </div>
   );
 };

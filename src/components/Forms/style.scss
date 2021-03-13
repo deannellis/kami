@@ -30,7 +30,7 @@ form {
 .number-input,
 .select-input {
   height: 5.6rem;
-  background: none;
+  background: var(--background-color--secondary);
   border: none;
   border-bottom: 2px solid var(--border-color);
   transition: all 0.3s ease-in-out;
@@ -74,6 +74,7 @@ select:focus + .label {
   margin-bottom: var(--m-size);
   font-size: 1.2rem;
   line-height: 1.6rem;
+  min-height: 1.6rem;
 }
 
 .input__helper-text {

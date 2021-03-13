@@ -6,8 +6,21 @@ header.header {
   justify-content: space-between;
   padding: 0 var(--m-size);
   box-shadow: $depth-1;
+  ul {
+    display: flex;
+  }
   li {
     list-style: none;
+    margin-left: var(--s-size);
+    transition: $default-transition;
+    font-weight: 700;
+    a {
+      color: var(--text-color);
+      text-decoration: none;
+      &:hover {
+        opacity: 0.84;
+      }
+    }
   }
   svg {
     fill: $dark-blue;
