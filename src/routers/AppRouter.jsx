@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import HomePage from "../pages/HomePage";
 import ThemePage from "../pages/ThemePage";
+import UtilitiesPage from "../pages/UtilitiesPage";
 
 const AppRouter = () => (
   <Router>
@@ -12,6 +13,9 @@ const AppRouter = () => (
       </Route>
       <Route path="/theme">
         <ThemePage />
+      </Route>
+      <Route path="/utilities">
+        <UtilitiesPage />
       </Route>
     </Switch>
   </Router>
