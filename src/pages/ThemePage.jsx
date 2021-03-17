@@ -30,7 +30,7 @@ const ThemePage = () => {
   return (
     <PageLayout>
       <h1>Themeing</h1>
-      <h2>Density</h2>
+      <h2>UI Density</h2>
       <form>
         <div className="input-group">
           <select
