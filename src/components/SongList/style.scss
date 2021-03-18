@@ -1,0 +1,20 @@
+// .song-list {
+// }
+
+.song-list__row {
+  padding: var(--s-size);
+  display: flex;
+  align-items: center;
+  img {
+    margin-right: var(--m-size);
+  }
+  &:nth-child(odd) {
+    background: var(--background-color--secondary);
+  }
+  p {
+    margin: 0.4rem 0 0;
+    &:nth-child(even) {
+      opacity: 0.5;
+    }
+  }
+}
