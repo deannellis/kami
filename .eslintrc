@@ -24,6 +24,7 @@
 				"exceptions": ["input", "select"]
 			}
 		],
-        "no-nested-ternary": [0]
+        "no-nested-ternary": [0],
+        "no-shadow": [0]
       }
 }

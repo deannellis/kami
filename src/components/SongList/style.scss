@@ -1,10 +1,8 @@
-// .song-list {
-// }
-
 .song-list__row {
   padding: var(--s-size);
   display: flex;
   align-items: center;
+  min-height: 8rem;
   img {
     margin-right: var(--m-size);
   }

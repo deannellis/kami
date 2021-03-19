@@ -3,11 +3,11 @@ import React from "react";
 import getPaths from "./paths";
 
 type IconProps = {
-  size?: number,
-  title?: string
-}
+  size?: number;
+  title?: string;
+};
 
-const Icon = ({size = 32, title = "Kami Logo"}: IconProps) => (
+const Icon = ({ size = 32, title = "Kami Logo" }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}

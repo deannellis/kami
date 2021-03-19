@@ -1,11 +1,13 @@
-import React from "react";
-import { QueryClient, QueryClientProvider, useQueryClient } from "react-query";
+import React, { useState } from "react";
 
 import useItunes from "../../hooks/useItunes";
+import Pagination from "../Pagination";
 
 const SongList = () => {
-  const { status, data, error, isFetching } = useItunes();
-  //   const queryClient = useQueryClient();
+  const queryLimit = 7;
+  const [querySkip, setQuerySkip] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const { status, data, error, isFetching } = useItunes(queryLimit, querySkip);
   return (
     <div>
       <h2>Weezer Songs</h2>
@@ -15,22 +17,35 @@ const SongList = () => {
         ) : status === "error" ? (
           <span>Error: {error.message}</span>
         ) : (
-          <div>
-            {data.results.map(({ trackName, collectionName, artworkUrl60 }) => (
-              <div className="song-list__row">
-                <img
-                  src={artworkUrl60}
-                  height="56px"
-                  alt={`${collectionName} artwork`}
-                />
-                <div>
-                  <p>{trackName}</p>
-                  <p>{collectionName}</p>
+          <>
+            {data.constrainedQuery.results.map(
+              ({ trackName, collectionName, artworkUrl60 }) => (
+                <div className="song-list__row">
+                  <img
+                    src={artworkUrl60}
+                    height="56px"
+                    alt={`${collectionName} artwork`}
+                  />
+                  <div>
+                    <p>{trackName}</p>
+                    <p>{collectionName}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            )}
             <div>{isFetching ? "Background Updating..." : " "}</div>
-          </div>
+            <Pagination
+              totalRecords={data.resultCount}
+              pageLimit={queryLimit}
+              pageNeighbors={1}
+              currentPage={currentPage}
+              onPageChanged={(paginationData) => {
+                const { currentPage } = paginationData;
+                setCurrentPage(currentPage);
+                setQuerySkip((currentPage - 1) * queryLimit);
+              }}
+            />
+          </>
         )}
       </div>
     </div>
