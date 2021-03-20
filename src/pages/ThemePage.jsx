@@ -3,32 +3,29 @@ import { useDispatch, useSelector } from "react-redux";
 
 import PageLayout from "../components/PageLayout";
 import { UiDensityValues, themeColors } from "../theme/themeValues";
-import { updateUiDensity } from "../theme/updateTheme";
+import { updateUiDensity, updateColorTheme } from "../theme/updateTheme";
 import Toggle from "../components/Toggle";
 import { setUiDensity } from "../actions/themeActions";
 
 const ThemePage = () => {
-  const [colorTheme, setColorTheme] = useState("light");
+  // const [colorTheme, setColorTheme] = useState("light");
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme);
-  const { uiDensity } = theme;
-  const updateColorTheme = (theme) => {
-    themeColors[theme].forEach(({ varName, value }) => {
-      document.documentElement.style.setProperty(`--${varName}`, value);
-    });
-  };
+  const { uiDensity, colorMode } = theme;
   return (
     <PageLayout>
       <h1>Themeing</h1>
       <h2>Dark/Light Mode</h2>
       <Toggle
-        checked={colorTheme === "light"}
+        checked={colorMode === "light"}
         onToggleChange={() => {
-          if (colorTheme === "light") {
-            setColorTheme("dark");
+          if (colorMode === "light") {
+            // setColorTheme("dark");
+            dispatch({ type: "TOGGLE_COLOR_MODE" });
             updateColorTheme("dark");
           } else {
-            setColorTheme("light");
+            // setColorTheme("light");
+            dispatch({ type: "TOGGLE_COLOR_MODE" });
             updateColorTheme("light");
           }
         }}

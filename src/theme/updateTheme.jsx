@@ -8,3 +8,8 @@ export const updateUiDensity = (value) => {
     );
   });
 };
+export const updateColorTheme = (theme) => {
+  themeColors[theme].forEach(({ varName, value }) => {
+    document.documentElement.style.setProperty(`--${varName}`, value);
+  });
+};
