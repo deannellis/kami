@@ -1,17 +1,18 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import PageLayout from "../components/PageLayout";
-import { UiDensityValues, themeColors } from "../styles/themeValues";
+import { UiDensityValues, themeColors } from "../theme/themeValues";
+import { updateUiDensity } from "../theme/updateTheme";
 import Toggle from "../components/Toggle";
+import { setUiDensity } from "../actions/themeActions";
 
 const ThemePage = () => {
-  const [uiDensity, setUiDensity] = useState("default");
   const [colorTheme, setColorTheme] = useState("light");
+  const dispatch = useDispatch();
+  const theme = useSelector((state) => state.theme);
+  const { uiDensity } = theme;
   const updateColorTheme = (theme) => {
-    // if(theme === 'light') {
-    //   console.log('light theme')
-    // } else {
-    // }
     themeColors[theme].forEach(({ varName, value }) => {
       document.documentElement.style.setProperty(`--${varName}`, value);
     });
@@ -40,14 +41,9 @@ const ThemePage = () => {
             className="select-input"
             onChange={(e) => {
               const { value } = e.target;
-              setUiDensity(value);
-
-              Object.keys(UiDensityValues[value]).forEach((size) => {
-                document.documentElement.style.setProperty(
-                  `--${size}-size`,
-                  `${UiDensityValues[value][size]}rem`
-                );
-              });
+              const action = setUiDensity(value);
+              dispatch(action);
+              updateUiDensity(value);
             }}
           >
             <option value="default">Default</option>
