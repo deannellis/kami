@@ -8,7 +8,7 @@ const getData = async ({ queryKey }) => {
     ? `${baseURL}&offset=${skip}&limit=${limit}`
     : `${baseURL}&limit=${limit}`;
   const { data } = await axios.get(queryURL);
-  const rawRequest = await axios.get(baseURL);
+  const rawRequest = await axios.get(`${baseURL}&limit=64`);
   const { resultCount } = rawRequest.data;
   const queryResult = { constrainedQuery: data, resultCount };
   return queryResult;
