@@ -22,4 +22,21 @@ export const UiDensityValues = {
   },
 };
 
-export const lightThemeColors = {};
+const darkBlue = "#094067";
+const mediumGray = "#16161a";
+export const themeColors = {
+  light: [
+    { varName: "background-color", value: "#f6f9fb" },
+    { varName: "background-color--secondary", value: "#fff" },
+    { varName: "text-color", value: "#202325" },
+    { varName: "header-color", value: darkBlue },
+    { varName: "footer-background-color", value: darkBlue },
+  ],
+  dark: [
+    { varName: "background-color", value: "#242629" },
+    { varName: "background-color--secondary", value: mediumGray },
+    { varName: "text-color", value: "#ffffffD6" },
+    { varName: "header-color", value: "#fff" },
+    { varName: "footer-background-color", value: mediumGray },
+  ],
+};

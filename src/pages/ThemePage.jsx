@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 
 import PageLayout from "../components/PageLayout";
-import { UiDensityValues } from "../styles/themeValues";
+import { UiDensityValues, themeColors } from "../styles/themeValues";
 import Toggle from "../components/Toggle";
 
 const ThemePage = () => {
   const [uiDensity, setUiDensity] = useState("default");
   const [colorTheme, setColorTheme] = useState("light");
+  const updateColorTheme = (theme) => {
+    // if(theme === 'light') {
+    //   console.log('light theme')
+    // } else {
+    // }
+    themeColors[theme].forEach(({ varName, value }) => {
+      document.documentElement.style.setProperty(`--${varName}`, value);
+    });
+  };
   return (
     <PageLayout>
       <h1>Themeing</h1>
@@ -16,8 +25,10 @@ const ThemePage = () => {
         onToggleChange={() => {
           if (colorTheme === "light") {
             setColorTheme("dark");
+            updateColorTheme("dark");
           } else {
             setColorTheme("light");
+            updateColorTheme("light");
           }
         }}
       />

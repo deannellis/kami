@@ -34,7 +34,7 @@ form {
   border: none;
   border-bottom: 2px solid var(--border-color);
   transition: all 0.3s ease-in-out;
-  // color: #fff;
+  color: var(--text-color);
   font-size: 1.6rem;
   margin-top: -1.6rem;
   padding: 1.6rem 1.2rem 0;
@@ -45,7 +45,7 @@ form {
   -webkit-appearance: none;
   box-sizing: border-box;
   border-radius: 0;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125.304 125.304"><path d="M62.652 103.895L0 21.41h125.304" fill="%23000000"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125.304 125.304"><path d="M62.652 103.895L0 21.41h125.304" fill="%23666666"/></svg>');
   background-repeat: no-repeat, repeat;
   background-position: right 0.7em top 70%, 0 0;
   background-size: 0.65em auto, 100%;
@@ -62,6 +62,7 @@ form {
 .label {
   font-size: 1.2rem;
   font-weight: 400;
+  margin: 0.2rem 0.4rem 0;
 }
 
 input:focus + .label,
