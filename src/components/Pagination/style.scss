@@ -7,7 +7,7 @@
   margin: var(--xl-size) 0 0;
   font-size: 1.8rem;
 }
-.pagination__button {
+.pagination__list-item {
   margin-right: var(--m-size);
   opacity: 0.74;
   line-height: 1.6rem;
@@ -17,8 +17,8 @@
     font-weight: 600;
   }
 }
-.pagination__button--active {
-  @extend .pagination__button;
+.pagination__list-item--active {
+  @extend .pagination__list-item;
   opacity: 1;
   font-weight: 600;
   border-bottom: 2px solid var(--main-accent-color);
@@ -26,7 +26,7 @@
   margin-top: 2px;
 }
 
-.pagination__link {
+.pagination__button {
   display: flex;
   align-items: center;
   color: var(--text-color);

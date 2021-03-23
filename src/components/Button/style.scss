@@ -38,6 +38,8 @@ button.button--no-style {
   @extend .button;
   background: none;
   border: none;
+  padding: 0 var(--xs-size);
+  color: var(--text-color);
   &:hover {
     box-shadow: none;
     opacity: 0.84;

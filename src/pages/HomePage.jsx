@@ -5,6 +5,7 @@ import PageLayout from "../components/PageLayout";
 import Modal from "../components/Modal";
 import SampleForm from "../components/Forms/SampleForm";
 import SongList from "../components/SongList";
+import Button from "../components/Button";
 
 const HomePage = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -28,52 +29,66 @@ const HomePage = () => {
             </p>
           </div>
           <div className="modal__footer">
-            <button
-              className="button"
-              type="button"
-              onClick={() => {
+            <Button
+              clickHandler={() => {
                 setModalIsOpen(false);
               }}
             >
               No way
-            </button>
-            <button
-              className="button--primary"
-              type="button"
-              onClick={() => {
+            </Button>
+            <Button
+              variant="primary"
+              clickHandler={() => {
                 setModalIsOpen(false);
               }}
             >
               Aww Yeah
-            </button>
+            </Button>
           </div>
         </Modal>
         <h1>UI Elements</h1>
         <h2>Buttons</h2>
         <div className="buttons">
-          <button className="button" type="button">
+          <Button
+            clickHandler={() => {
+              console.log("default button clicked");
+            }}
+          >
             Default
-          </button>
-          <button className="button--primary" type="button">
+          </Button>
+          <Button
+            variant="primary"
+            clickHandler={() => {
+              console.log("primary button clicked");
+            }}
+          >
             Primary
-          </button>
-          <button className="button--outline" type="button">
+          </Button>
+          <Button
+            variant="outline"
+            clickHandler={() => {
+              console.log("outline button clicked");
+            }}
+          >
             Outline
-          </button>
-          <button className="button--no-style" type="button">
+          </Button>
+          <Button
+            variant="no-style"
+            clickHandler={() => {
+              console.log("no style button clicked");
+            }}
+          >
             No Style
-          </button>
+          </Button>
         </div>
         <h2>Modal</h2>
-        <button
-          className="button"
-          type="button"
-          onClick={() => {
+        <Button
+          clickHandler={() => {
             setModalIsOpen(true);
           }}
         >
           Open Modal
-        </button>
+        </Button>
         <h1>Form Elements</h1>
         <h2>Sample Form</h2>
         <SampleForm />
