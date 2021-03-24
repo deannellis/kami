@@ -2,7 +2,6 @@ import * as React from "react";
 import { useState } from "react";
 
 const getRange = (from: number, to: number, step = 1) => {
-  console.log("hiya -> ", typeof from);
   let i = from;
   const range = [];
   while (i <= to) {
@@ -44,18 +43,14 @@ const Pagination = ({
     onPageChanged(paginationData);
   };
 
-  const handlePageClick = (page: number) => (
-    e: React.MouseEvent<HTMLAnchorElement>
-  ) => {
-    e.preventDefault();
+  const handlePageClick = (page: number | string) => {
+    if (typeof page !== "number") return;
     gotoPage(page);
   };
-  const handlePageRight = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
+  const handlePageRight = () => {
     gotoPage(localCurrentPage + pageNeighbors * 2 + 1);
   };
-  const handlePageLeft = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
+  const handlePageLeft = () => {
     gotoPage(localCurrentPage - pageNeighbors * 2 - 1);
   };
 
@@ -104,43 +99,43 @@ const Pagination = ({
           {pages.map((page) => {
             if (page === LEFT_PAGE) {
               return (
-                <li className="pagination__button" key="page-left-button">
-                  <a
-                    href="#"
-                    className="pagination__link"
+                <li className="pagination__list-item" key="page-left-button">
+                  <button
+                    className="pagination__button button--no-style"
                     onClick={handlePageLeft}
                   >
                     &#8592;
-                  </a>
+                  </button>
                 </li>
               );
             }
             if (page === RIGHT_PAGE) {
               return (
-                <li className="pagination__button" key="page-right-button">
-                  <a
-                    href="#"
-                    className="pagination__link"
+                <li className="pagination__list-item" key="page-right-button">
+                  <button
+                    className="pagination__button button--no-style"
                     onClick={handlePageRight}
                   >
                     &#8594;
-                  </a>
+                  </button>
                 </li>
               );
             }
             return (
               <li
-                className={`pagination__button${
+                className={`pagination__list-item${
                   localCurrentPage === page ? "--active" : ""
                 }`}
               >
-                <a
-                  href="#"
-                  className="pagination__link"
-                  onClick={handlePageClick(page)}
+                <button
+                  className="pagination__button button--no-style"
+                  onClick={() => {
+                    handlePageClick(page);
+                  }}
+                  key={page}
                 >
                   {page}
-                </a>
+                </button>
               </li>
             );
           })}
