@@ -33,6 +33,7 @@ form {
   background: var(--background-color--secondary);
   border: none;
   border-bottom: 2px solid var(--border-color);
+  border-radius: 2px 2px 0 0;
   transition: all 0.3s ease-in-out;
   color: var(--text-color);
   font-size: 1.6rem;
@@ -79,9 +80,8 @@ select:focus + .label {
 }
 
 .input__helper-text {
-  // color: #fff;
   opacity: 0.54;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .input__error {

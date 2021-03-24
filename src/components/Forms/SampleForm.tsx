@@ -54,7 +54,7 @@ const SampleForm = () => (
         <option value="fall">Fall</option>
         <option value="winter">Winter</option>
       </SelectInput>
-      <Checkbox name="acceptedTerms">
+      <Checkbox name="acceptedTerms" id="acceptedTerms">
         I accept the Terms and Conditions
       </Checkbox>
       <button className="button--primary" type="submit">
