@@ -12,9 +12,10 @@ const Checkbox = ({ children, ...props }: CheckboxProps) => {
   const { name, id } = props;
   return (
     <div>
-      <label className="checkbox-input" htmlFor={id || name}>
-        <input type="checkbox" {...field} {...props} />
+      <label className="checkbox__label" htmlFor={id || name}>
         {children}
+        <input type="checkbox" {...field} {...props} />
+        <span className="checkbox__checkmark" />
       </label>
       {meta.touched && meta.error ? (
         <div className="input__error">{meta.error}</div>
