@@ -2,20 +2,20 @@ import * as React from "react";
 
 type ButtonProps = {
   submit?: boolean;
-  variant?: string;
+  variant?: "default" | "primary" | "outline" | "no-style";
   children: React.ReactNode;
-  clickHandler(event: React.MouseEvent<HTMLButtonElement>): void;
+  onClick(event: React.MouseEvent<HTMLButtonElement>): void;
 };
 const Button = ({
   submit = false,
-  variant = "",
+  variant = "default",
   children,
-  clickHandler,
+  onClick,
 }: ButtonProps) => (
   <button
-    className={!!variant ? `button--${variant}` : "button"}
+    className={variant !== "default" ? `button--${variant}` : "button"}
     type={submit ? "submit" : "button"}
-    onClick={clickHandler}
+    onClick={onClick}
   >
     {children}
   </button>
