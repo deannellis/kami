@@ -4,7 +4,7 @@ import Button from "./index";
 
 export default {
   component: Button,
-  title: "Button",
+  title: "Elements/Button",
   decorators: [
     (Story) => (
       <div className="buttons">
