@@ -1,22 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Icon from "../Icon";
+import kamiMark from "../../images/kami_mark.png";
+import navItems from "./navItems";
 
-const Header = () => (
+type HeaderProps = {
+  currentPath: string;
+};
+
+const Header = ({ currentPath }: HeaderProps) => (
   <header className="header">
-    <Icon size={32} title="Kami Logo" />
+    <div className="header__logo">
+      <img src={kamiMark} alt="kami brand mark" height="40px" />
+      <h1>kami</h1>
+    </div>
     <nav>
       <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/theme">Theme</Link>
-        </li>
-        <li>
-          <Link to="/utilities">Utils</Link>
-        </li>
+        {navItems.map(({ title, path }) => (
+          <li
+            className={
+              currentPath === path
+                ? "header__nav-item--active"
+                : "header__nav-item"
+            }
+            key={title}
+          >
+            <Link to={path}>{title}</Link>
+          </li>
+        ))}
       </ul>
     </nav>
   </header>

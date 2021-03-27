@@ -11,18 +11,31 @@ header.header {
   }
   li {
     list-style: none;
-    margin-left: var(--s-size);
+    margin-left: var(--m-size);
     transition: $default-transition;
     font-weight: 700;
     a {
       color: var(--text-color);
       text-decoration: none;
-      &:hover {
-        opacity: 0.84;
-      }
     }
   }
   svg {
     fill: $dark-blue;
+  }
+}
+
+.header__logo {
+  display: flex;
+  align-items: flex-end;
+  h1 {
+    margin: 0 0 0 var(--s-size);
+    font-weight: 500;
+  }
+}
+
+.header__nav-item {
+  opacity: 0.74;
+  &:hover {
+    opacity: 1;
   }
 }
