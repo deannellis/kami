@@ -25,11 +25,16 @@ header.header {
 }
 
 .header__logo {
-  display: flex;
-  align-items: flex-end;
   h1 {
     margin: 0 0 0 var(--s-size);
     font-weight: 500;
+  }
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+    line-height: 3.2rem;
   }
 }
 

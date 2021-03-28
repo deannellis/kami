@@ -11,8 +11,10 @@ type HeaderProps = {
 const Header = ({ currentPath }: HeaderProps) => (
   <header className="header">
     <div className="header__logo">
-      <img src={kamiMark} alt="kami brand mark" height="40px" />
-      <h1>kami</h1>
+      <Link to="/">
+        <img src={kamiMark} alt="kami brand mark" height="40px" />
+        <h1>kami</h1>
+      </Link>
     </div>
     <nav>
       <ul>
