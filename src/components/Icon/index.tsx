@@ -15,7 +15,7 @@ const Icon = ({ size = 32, title = "Kami Logo" }: IconProps) => (
     viewBox="0 0 512 512"
     aria-labelledby="title"
   >
-    <title id={title}>Moon Icon</title>
+    <title id={title}>{title}</title>
     {getPaths(title)}
   </svg>
 );

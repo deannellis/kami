@@ -8,6 +8,13 @@ footer.footer {
   justify-content: space-between;
   svg {
     fill: #fff;
+    transition: $default-transition;
+    &:hover {
+      opacity: 0.84;
+    }
+  }
+  a {
+    color: #fff;
   }
 }
 
