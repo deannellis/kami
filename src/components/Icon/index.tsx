@@ -7,7 +7,7 @@ type IconProps = {
   title?: string;
 };
 
-const Icon = ({ size = 32, title = "Kami Logo" }: IconProps) => (
+const Icon = ({ size = 32, title = "Moon Icon" }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}

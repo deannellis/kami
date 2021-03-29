@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import PageLayout from "../components/PageLayout";
-import { UiDensityValues, themeColors } from "../theme/themeValues";
 import { updateUiDensity, updateColorTheme } from "../theme/updateTheme";
 import Toggle from "../components/Toggle";
 import { setUiDensity } from "../actions/themeActions";
 
 const ThemePage = () => {
-  // const [colorTheme, setColorTheme] = useState("light");
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme);
   const { uiDensity, colorMode } = theme;
@@ -18,13 +16,13 @@ const ThemePage = () => {
       <h2>Dark/Light Mode</h2>
       <Toggle
         checked={colorMode === "light"}
+        onIcon="Sun Icon"
+        offIcon="Moon Icon"
         onToggleChange={() => {
           if (colorMode === "light") {
-            // setColorTheme("dark");
             dispatch({ type: "TOGGLE_COLOR_MODE" });
             updateColorTheme("dark");
           } else {
-            // setColorTheme("light");
             dispatch({ type: "TOGGLE_COLOR_MODE" });
             updateColorTheme("light");
           }
