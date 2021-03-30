@@ -30,7 +30,7 @@ const HomePage = () => {
           </div>
           <div className="modal__footer">
             <Button
-              clickHandler={() => {
+              onClick={() => {
                 setModalIsOpen(false);
               }}
             >
@@ -38,7 +38,7 @@ const HomePage = () => {
             </Button>
             <Button
               variant="primary"
-              clickHandler={() => {
+              onClick={() => {
                 setModalIsOpen(false);
               }}
             >
@@ -50,7 +50,7 @@ const HomePage = () => {
         <h2>Buttons</h2>
         <div className="buttons">
           <Button
-            clickHandler={() => {
+            onClick={() => {
               console.log("default button clicked");
             }}
           >
@@ -58,7 +58,7 @@ const HomePage = () => {
           </Button>
           <Button
             variant="primary"
-            clickHandler={() => {
+            onClick={() => {
               console.log("primary button clicked");
             }}
           >
@@ -66,7 +66,7 @@ const HomePage = () => {
           </Button>
           <Button
             variant="outline"
-            clickHandler={() => {
+            onClick={() => {
               console.log("outline button clicked");
             }}
           >
@@ -74,7 +74,7 @@ const HomePage = () => {
           </Button>
           <Button
             variant="no-style"
-            clickHandler={() => {
+            onClick={() => {
               console.log("no style button clicked");
             }}
           >
@@ -83,7 +83,7 @@ const HomePage = () => {
         </div>
         <h2>Modal</h2>
         <Button
-          clickHandler={() => {
+          onClick={() => {
             setModalIsOpen(true);
           }}
         >
