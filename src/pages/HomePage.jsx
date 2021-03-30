@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import { QueryClient, QueryClientProvider, useQueryClient } from "react-query";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 import PageLayout from "../components/PageLayout";
 import Modal from "../components/Modal";
 import SampleForm from "../components/Forms/SampleForm";
 import SongList from "../components/SongList";
 import Button from "../components/Button";
-import iconList from "../components/Icon/iconList";
-import Icon from "../components/Icon";
+import IconList from "../components/Icon/iconList";
 
 const HomePage = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -92,14 +91,7 @@ const HomePage = () => {
           Open Modal
         </Button>
         <h2>Icons</h2>
-        <div className="icon__list">
-          {iconList.map((iconTitle) => (
-            <div className="icon__list-item">
-              <Icon title={iconTitle} />
-              <p>{iconTitle}</p>
-            </div>
-          ))}
-        </div>
+        <IconList />
         <h1>Form Elements</h1>
         <h2>Sample Form</h2>
         <SampleForm />
