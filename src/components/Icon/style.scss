@@ -1,0 +1,15 @@
+.icon__list {
+  display: flex;
+  svg {
+    fill: var(--text-color);
+  }
+}
+.icon__list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: var(--s-size);
+  p {
+    font-size: var(--s-size);
+  }
+}

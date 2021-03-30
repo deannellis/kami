@@ -6,6 +6,8 @@ import Modal from "../components/Modal";
 import SampleForm from "../components/Forms/SampleForm";
 import SongList from "../components/SongList";
 import Button from "../components/Button";
+import iconList from "../components/Icon/iconList";
+import Icon from "../components/Icon";
 
 const HomePage = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -89,6 +91,15 @@ const HomePage = () => {
         >
           Open Modal
         </Button>
+        <h2>Icons</h2>
+        <div className="icon__list">
+          {iconList.map((iconTitle) => (
+            <div className="icon__list-item">
+              <Icon title={iconTitle} />
+              <p>{iconTitle}</p>
+            </div>
+          ))}
+        </div>
         <h1>Form Elements</h1>
         <h2>Sample Form</h2>
         <SampleForm />
