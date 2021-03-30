@@ -5,6 +5,7 @@
 .toggle__icon {
   z-index: $z-1;
   position: absolute;
+  pointer-events: none;
   top: 0.8rem;
   svg {
     fill: #fff;

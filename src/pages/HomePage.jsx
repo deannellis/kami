@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { QueryClient, QueryClientProvider, useQueryClient } from "react-query";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 import PageLayout from "../components/PageLayout";
 import Modal from "../components/Modal";
 import SampleForm from "../components/Forms/SampleForm";
 import SongList from "../components/SongList";
 import Button from "../components/Button";
+import IconList from "../components/Icon/iconList";
 
 const HomePage = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -30,7 +31,7 @@ const HomePage = () => {
           </div>
           <div className="modal__footer">
             <Button
-              clickHandler={() => {
+              onClick={() => {
                 setModalIsOpen(false);
               }}
             >
@@ -38,7 +39,7 @@ const HomePage = () => {
             </Button>
             <Button
               variant="primary"
-              clickHandler={() => {
+              onClick={() => {
                 setModalIsOpen(false);
               }}
             >
@@ -50,7 +51,7 @@ const HomePage = () => {
         <h2>Buttons</h2>
         <div className="buttons">
           <Button
-            clickHandler={() => {
+            onClick={() => {
               console.log("default button clicked");
             }}
           >
@@ -58,7 +59,7 @@ const HomePage = () => {
           </Button>
           <Button
             variant="primary"
-            clickHandler={() => {
+            onClick={() => {
               console.log("primary button clicked");
             }}
           >
@@ -66,7 +67,7 @@ const HomePage = () => {
           </Button>
           <Button
             variant="outline"
-            clickHandler={() => {
+            onClick={() => {
               console.log("outline button clicked");
             }}
           >
@@ -74,7 +75,7 @@ const HomePage = () => {
           </Button>
           <Button
             variant="no-style"
-            clickHandler={() => {
+            onClick={() => {
               console.log("no style button clicked");
             }}
           >
@@ -83,12 +84,14 @@ const HomePage = () => {
         </div>
         <h2>Modal</h2>
         <Button
-          clickHandler={() => {
+          onClick={() => {
             setModalIsOpen(true);
           }}
         >
           Open Modal
         </Button>
+        <h2>Icons</h2>
+        <IconList />
         <h1>Form Elements</h1>
         <h2>Sample Form</h2>
         <SampleForm />
