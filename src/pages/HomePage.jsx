@@ -7,6 +7,7 @@ import SampleForm from "../components/Forms/SampleForm";
 import SongList from "../components/SongList";
 import Button from "../components/Button";
 import IconList from "../components/Icon/iconList";
+import LoadingAnimation from "../components/LoadingAnimation";
 
 const HomePage = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -92,6 +93,8 @@ const HomePage = () => {
         </Button>
         <h2>Icons</h2>
         <IconList />
+        <h2>Loading Animation</h2>
+        <LoadingAnimation />
         <h1>Form Elements</h1>
         <h2>Sample Form</h2>
         <SampleForm />

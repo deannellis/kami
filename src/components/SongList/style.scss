@@ -1,3 +1,12 @@
+.song-list__rows,
+.song-list__placeholder {
+  min-height: 56rem;
+}
+.song-list__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .song-list__row {
   padding: var(--s-size);
   display: flex;
