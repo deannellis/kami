@@ -2,38 +2,52 @@ import React, { useState } from "react";
 
 import useItunes from "../../hooks/useItunes";
 import Pagination from "../Pagination";
+import LoadingAnimation from "../LoadingAnimation";
 
 const SongList = () => {
   const queryLimit = 7;
   const [querySkip, setQuerySkip] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-  const { status, data, error, isFetching } = useItunes(queryLimit, querySkip);
+  const { data, isFetching, status, error } = useItunes(queryLimit, querySkip);
   return (
     <div>
       <h2>Weezer Songs</h2>
       <div className="song-list">
-        {status === "loading" ? (
-          "Loading..."
-        ) : status === "error" ? (
-          <span>Error: {error.message}</span>
-        ) : (
-          <>
-            {data.constrainedQuery.results.map(
-              ({ trackName, collectionName, artworkUrl60 }) => (
-                <div className="song-list__row">
-                  <img
-                    src={artworkUrl60}
-                    height="56px"
-                    alt={`${collectionName} artwork`}
-                  />
-                  <div>
-                    <p>{trackName}</p>
-                    <p>{collectionName}</p>
+        <>
+          <div className="song-list__rows">
+            {status === "loading" ? (
+              <div className="song-list__placeholder">
+                <LoadingAnimation />
+              </div>
+            ) : status === "error" ? (
+              <div className="song-list__placeholder">
+                <span>
+                  <b>Error:</b> {error.message}
+                </span>
+              </div>
+            ) : isFetching ? (
+              <div className="song-list__placeholder">
+                <LoadingAnimation />
+              </div>
+            ) : (
+              data.constrainedQuery.results.map(
+                ({ trackName, collectionName, artworkUrl60 }) => (
+                  <div className="song-list__row">
+                    <img
+                      src={artworkUrl60}
+                      height="56px"
+                      alt={`${collectionName} artwork`}
+                    />
+                    <div>
+                      <p>{trackName}</p>
+                      <p>{collectionName}</p>
+                    </div>
                   </div>
-                </div>
+                )
               )
             )}
-            <div>{isFetching ? "Background Updating..." : " "}</div>
+          </div>
+          {status !== "loading" && (
             <Pagination
               totalRecords={data.resultCount}
               pageLimit={queryLimit}
@@ -45,8 +59,8 @@ const SongList = () => {
                 setQuerySkip((currentPage - 1) * queryLimit);
               }}
             />
-          </>
-        )}
+          )}
+        </>
       </div>
     </div>
   );
