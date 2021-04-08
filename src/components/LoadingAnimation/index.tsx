@@ -14,14 +14,14 @@ const container = {
   },
 };
 
-const dot = {
+const circle = {
   start: { cy: 16 },
   end: {
     cy: 8,
   },
 };
 
-const dotTransition = {
+const circleTransition = {
   duration: 0.5,
   yoyo: Infinity,
   ease: "easeInOut",
@@ -41,22 +41,22 @@ const LoadingAnimation = () => (
         cx="15.97"
         cy="16"
         r="8"
-        variants={dot}
-        transition={dotTransition}
+        variants={circle}
+        transition={circleTransition}
       />
       <motion.circle
         cx="40"
         cy="16"
         r="8"
-        variants={dot}
-        transition={dotTransition}
+        variants={circle}
+        transition={circleTransition}
       />
       <motion.circle
         cx="64.03"
         cy="16"
         r="8"
-        variants={dot}
-        transition={dotTransition}
+        variants={circle}
+        transition={circleTransition}
       />
     </motion.svg>
   </div>

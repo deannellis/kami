@@ -7,4 +7,4 @@ export default {
   component: FooterComponent,
 };
 
-export const Footer = (args) => <FooterComponent {...args} />;
+export const Footer = () => <FooterComponent />;
