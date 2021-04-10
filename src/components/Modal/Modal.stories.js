@@ -1,34 +1,36 @@
-import React, { useState } from "react";
+import React from "react";
 
 import ModalComponent from "./index";
 import Button from "../Button";
 
-const [modalIsOpen, setModalIsOpen] = useState(false);
 export default {
   component: ModalComponent,
   title: "Elements/Modal",
 };
 
 const Template = (args) => <ModalComponent {...args} />;
-// const Template = (args) => (
-//   <>
-//     <ModalComponent {...args} />
-//     <Button
-//       onClick={() => {
-//         setModalIsOpen(true);
-//       }}
-//     >
-//       Open Modal
-//     </Button>
-//   </>
-// );
 
 export const Modal = Template.bind({});
 Modal.args = {
-  isOpen: modalIsOpen,
-  handleClose: () => {
-    setModalIsOpen(false);
-  },
+  isOpen: true,
+  handleClose: () => {},
   contentLabel: "Sample Modal",
-  children: "Test",
+  children: (
+    <>
+      <div className="modal__content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+          consequatur rerum nostrum porro magni cupiditate fugit, cumque tempore
+          quaerat corporis ipsum quos a, deleniti distinctio eius maxime
+          repellat repudiandae impedit.
+        </p>
+      </div>
+      <div className="modal__footer">
+        <Button variant="primary" onClick={() => {}}>
+          Aww Yeah
+        </Button>
+        <Button onClick={() => {}}>No Way</Button>
+      </div>
+    </>
+  ),
 };
