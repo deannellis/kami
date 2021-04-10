@@ -9,18 +9,6 @@ export default {
 };
 
 const Template = (args) => <ModalComponent {...args} />;
-// const Template = (args) => (
-//   <>
-//     <ModalComponent {...args} />
-//     <Button
-//       onClick={() => {
-//         setModalIsOpen(true);
-//       }}
-//     >
-//       Open Modal
-//     </Button>
-//   </>
-// );
 
 export const Modal = Template.bind({});
 Modal.args = {
