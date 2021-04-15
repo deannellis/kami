@@ -8,10 +8,15 @@ import SongList from "../components/SongList";
 import Button from "../components/Button";
 import IconList from "../components/Icon/iconList";
 import LoadingAnimation from "../components/LoadingAnimation";
+import Toggle from "../components/Toggle";
+import RangeSlider from "../components/RangeSlider";
 
 const HomePage = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [toggleIsChecked, setToggleIsChecked] = useState(false);
+  const [rangeValue, setRangeValue] = useState(50);
   const queryClient = new QueryClient();
+
   return (
     <QueryClientProvider client={queryClient}>
       <PageLayout>
@@ -95,6 +100,23 @@ const HomePage = () => {
         <IconList />
         <h2>Loading Animation</h2>
         <LoadingAnimation />
+        <h2>Toggle</h2>
+        <Toggle
+          checked={toggleIsChecked}
+          onToggleChange={() => {
+            setToggleIsChecked(!toggleIsChecked);
+          }}
+        />
+        <h2>Range Slider</h2>
+        <p>Range Value: {rangeValue}</p>
+        <RangeSlider
+          min={0}
+          max={100}
+          value={rangeValue}
+          onSliderUpdate={(e) => {
+            setRangeValue(e.target.value);
+          }}
+        />
         <h1>Form Elements</h1>
         <h2>Sample Form</h2>
         <SampleForm />
