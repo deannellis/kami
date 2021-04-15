@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import PageLayout from "../components/PageLayout";
 import useClickOutside from "../hooks/useClickOutside";
+import CSSUtilities from "../components/CSSUtilities";
 
 const UtilitiesPage = () => {
   const ref = useRef();
@@ -19,7 +20,7 @@ const UtilitiesPage = () => {
   };
   return (
     <PageLayout>
-      <h1>Utilities</h1>
+      <h1>Functional Utilities</h1>
       <h2>Handle Outside Click</h2>
       <section
         ref={ref}
@@ -42,6 +43,7 @@ const UtilitiesPage = () => {
       >
         Clicked Outside!
       </motion.h3>
+      <CSSUtilities />
     </PageLayout>
   );
 };

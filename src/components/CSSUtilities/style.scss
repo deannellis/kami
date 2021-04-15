@@ -1,0 +1,27 @@
+.css-utils__shadows {
+  display: flex;
+  div {
+    height: 25.6rem;
+    width: 25.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: var(--l-size);
+    &:nth-child(1) {
+      margin-left: 0;
+      box-shadow: $depth-1;
+    }
+    &:nth-child(2) {
+      box-shadow: $depth-2;
+    }
+    &:nth-child(3) {
+      box-shadow: $depth-3;
+    }
+    &:nth-child(4) {
+      box-shadow: $depth-4;
+    }
+    &:nth-child(5) {
+      box-shadow: $depth-5;
+    }
+  }
+}
