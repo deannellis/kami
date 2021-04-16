@@ -5,6 +5,7 @@ import Toggle from "./index";
 export default {
   title: "Modules/Toggle",
   component: Toggle,
+  argTypes: { onToggleChange: { action: "toggled" } },
 };
 
 const Template = (args) => <Toggle {...args} />;
@@ -12,17 +13,11 @@ const Template = (args) => <Toggle {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   checked: true,
-  onToggleChange: () => {
-    console.log("Toggled");
-  },
 };
 
 export const WithIcons = Template.bind({});
 WithIcons.args = {
   checked: true,
-  onToggleChange: () => {
-    console.log("Toggled");
-  },
   onIcon: "Sun Icon",
   offIcon: "Moon Icon",
 };
