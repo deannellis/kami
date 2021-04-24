@@ -1,0 +1,200 @@
+$color-01: #87c8fa;
+$color-02: #3da9fc;
+$width: 6.4rem;
+$duration: 6s;
+
+@keyframes fold-01 {
+  from {
+    transform: rotate3d(0);
+  }
+  to {
+    transform: rotate3d(1, 0, 0, 0.5turn);
+  }
+}
+
+@keyframes fold-02 {
+  from {
+    transform: rotate3d(-1, -1, 0, 0);
+  }
+  50% {
+    transform: rotate3d(-1, -1, 0, 180deg);
+  }
+  to {
+    transform: rotate3d(-1, -1, 0, 180deg);
+  }
+}
+
+@keyframes fold-02--to-out {
+  from {
+    transform: rotate3d(-1, -1, 0, 0);
+  }
+  50% {
+    transform: rotate3d(-1, -1, 0, 180deg);
+    opacity: 1;
+  }
+  51% {
+    transform: rotate3d(-1, -1, 0, 180deg);
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes out-after-2 {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fold-final {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+    transform: rotateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(180deg);
+  }
+}
+
+.animation {
+  position: relative;
+}
+.animation__top-half {
+  width: 512px;
+  height: 256px;
+  background: $color-01;
+}
+
+.animation__bottom-half {
+  width: 512px;
+  height: 256px;
+  background: $color-02;
+  //   transform: rotate3d(0, 1, 0, 0.25turn);
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  // animation-name: fold-01;
+  transform-origin: 0% top;
+  box-shadow: $depth-1;
+}
+
+.rectangle {
+  width: calc(2 * #{$width});
+  height: $width;
+  background: $color-02;
+}
+
+.triangle-01 {
+  position: relative;
+  width: $width;
+  height: $width;
+  // background: $color-02;
+}
+.triangle-01:before,
+.triangle-01:after {
+  background: $color-01;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // transform-style: preserve-3d;
+  // transform-origin: 0 0;
+  // transform-origin: top right;
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  //   -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
+  animation-duration: $duration;
+  animation-timing-function: linear;
+  animation-name: fold-02--to-out;
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
+
+// .triangle-02 {
+//   @extend .triangle-01;
+// }
+
+.triangle-02 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $width;
+  height: $width;
+}
+.triangle-02:before,
+.triangle-02:after {
+  background: $color-02;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // transform-origin: 0 0;
+  // transform-origin: top right;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  //   -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
+  animation-duration: $duration;
+  animation-timing-function: linear;
+  animation-name: out-after-2;
+  animation-fill-mode: forwards;
+  z-index: 0;
+}
+
+.triangle-03 {
+  @extend .triangle-01;
+  position: absolute;
+  top: 0;
+}
+.triangle-04 {
+  @extend .triangle-02;
+}
+.triangle-03,
+.triangle-04 {
+  transform: rotate(180deg);
+  left: $width;
+}
+.triangle-03:before,
+.triangle-03:after {
+  background: $color-02;
+  animation-name: fold-02;
+}
+.triangle-04:before,
+.triangle-04:after {
+  background: $color-01;
+}
+.triangle-05 {
+  @extend .triangle-01;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.triangle-05:before,
+.triangle-05:after {
+  animation-name: fold-final;
+  transform-origin: right center;
+  animation-duration: $duration;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
