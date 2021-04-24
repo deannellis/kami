@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 import PageLayout from "../components/PageLayout";
 
@@ -10,12 +9,12 @@ const AnimationTest = () => (
       <div className="animation__bottom-half" />
     </div> */}
     <div className="animation">
-      <div className="triangle-01" />
-      <div className="triangle-02" />
-      <div className="triangle-04" />
-      <div className="triangle-03" />
-      <div className="triangle-05" />
-      <div className="rectangle" />
+      <div className="animation__triangle-01" />
+      <div className="animation__triangle-02" />
+      <div className="animation__triangle-04" />
+      <div className="animation__triangle-03" />
+      <div className="animation__triangle-05" />
+      <div className="animation__rectangle" />
     </div>
   </PageLayout>
 );
