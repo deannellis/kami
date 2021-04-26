@@ -8,3 +8,16 @@
     margin: 0;
   }
 }
+
+.landing-page__intro {
+  background: var(--main-accent-color);
+  color: var(--background-color--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--l-size) 0 var(--xl-size);
+  ul {
+    line-height: $leading-relaxed;
+  }
+}

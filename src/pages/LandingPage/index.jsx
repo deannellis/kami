@@ -12,15 +12,19 @@ const LandingPage = () => (
         <div className="animation__triangle-03" />
         <div className="animation__triangle-05" />
         <div className="animation__rectangle" />
-        {/* <h1>kami</h1> */}
       </div>
       <h1 className="animation__title">kami</h1>
     </section>
     <section className="landing-page__intro">
-      <p>
-        Kami started as a boilerplate for single page applications. I also
-        wanted to
-      </p>
+      <h1>My goal with kami was threefold:</h1>
+      <ul>
+        <li>To create a boilerplate project for future React applications</li>
+        <li>
+          To capture UI patterns I have implemeneted many times and provide a
+          base design system that is easily adpated
+        </li>
+        <li>To try new technologies & best practices</li>
+      </ul>
     </section>
   </PageLayout>
 );

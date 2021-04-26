@@ -5,7 +5,6 @@ import ComponentsPage from "../pages/ComponentsPage";
 import ThemePage from "../pages/ThemePage";
 import UtilitiesPage from "../pages/UtilitiesPage";
 import LandingPage from "../pages/LandingPage";
-import AnimationTest from "../pages/AnimationTest";
 
 const AppRouter = () => (
   <Router>
@@ -21,9 +20,6 @@ const AppRouter = () => (
       </Route>
       <Route path="/utilities">
         <UtilitiesPage />
-      </Route>
-      <Route path="/ani-test">
-        <AnimationTest />
       </Route>
     </Switch>
   </Router>
