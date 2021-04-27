@@ -12,11 +12,13 @@
 .landing-page__section {
   display: flex;
   padding: var(--xl-size) 0;
+  &:nth-child(even) {
+    background: var(--main-accent-color);
+    color: var(--button-text-color--primary);
+  }
 }
 .landing-page__intro {
   @extend .landing-page__section;
-  background: var(--main-accent-color);
-  color: var(--button-text-color--primary);
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -41,6 +43,35 @@
     line-height: $leading-relaxed;
     a {
       color: var(--text-color);
+    }
+  }
+}
+
+.landing-page__storybook {
+  @extend .landing-page__section;
+  padding: 0;
+  div {
+    max-width: 50vw;
+    line-height: $leading-relaxed;
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: left top;
+      box-shadow: $depth-5;
+    }
+    a {
+      color: var(--button-text-color--primary);
+    }
+    button {
+      border-color: var(--button-text-color--primary);
+      color: var(--button-text-color--primary);
+    }
+    &:first-child {
+      padding: var(--l-size) var(--l-size) var(--xl-size);
+    }
+    &:nth-child(2),
+    img {
+      max-height: 27.2rem;
     }
   }
 }
