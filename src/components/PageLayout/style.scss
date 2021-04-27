@@ -8,3 +8,8 @@ main {
     margin-top: var(--xl-size);
   }
 }
+
+.page-layout--no-pad {
+  @extend .page-layout;
+  padding: 0;
+}

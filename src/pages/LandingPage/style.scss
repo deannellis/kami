@@ -1,0 +1,26 @@
+.landing-page__hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  flex-direction: column;
+  h1 {
+    margin: 0;
+  }
+}
+
+.landing-page__intro {
+  background: var(--main-accent-color);
+  color: var(--button-text-color--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--l-size) 0 var(--xl-size);
+  ul {
+    line-height: $leading-loose;
+  }
+  h1 {
+    color: var(--button-text-color--primary);
+  }
+}

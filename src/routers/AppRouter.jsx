@@ -1,15 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import HomePage from "../pages/HomePage";
+import ComponentsPage from "../pages/ComponentsPage";
 import ThemePage from "../pages/ThemePage";
 import UtilitiesPage from "../pages/UtilitiesPage";
+import LandingPage from "../pages/LandingPage";
 
 const AppRouter = () => (
   <Router>
     <Switch>
       <Route path="/" exact>
-        <HomePage />
+        <LandingPage />
+      </Route>
+      <Route path="/components">
+        <ComponentsPage />
       </Route>
       <Route path="/theme">
         <ThemePage />
