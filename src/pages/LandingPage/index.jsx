@@ -81,7 +81,7 @@ const LandingPage = () => (
           you can review UI changes with your team before commiting.
         </p>
         <a href="https://60876ffa514a8d002188dbcf-xctqpzojhf.chromatic.com/">
-          <Button variant="outline">View Storybook</Button>
+          <Button variant="outline">View Kami's Storybook</Button>
         </a>
       </div>
       <div>
