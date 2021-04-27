@@ -9,18 +9,38 @@
   }
 }
 
+.landing-page__section {
+  display: flex;
+  padding: var(--xl-size) 0;
+}
 .landing-page__intro {
+  @extend .landing-page__section;
   background: var(--main-accent-color);
   color: var(--button-text-color--primary);
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--l-size) 0 var(--xl-size);
   ul {
     line-height: $leading-loose;
   }
   h1 {
     color: var(--button-text-color--primary);
+  }
+}
+
+.landing-page__technologies {
+  @extend .landing-page__section;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  svg {
+    fill: var(--button-text-color);
+  }
+  div {
+    text-align: center;
+    max-width: 30.4rem;
+    line-height: $leading-relaxed;
+    a {
+      color: var(--text-color);
+    }
   }
 }
