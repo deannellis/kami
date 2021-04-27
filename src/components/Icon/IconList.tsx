@@ -9,9 +9,12 @@ const icons = [
   "Stacked Dots Icon",
   "Info Icon",
   "Menu Icon",
-  "Facebook Logo",
-  "GitHub Logo",
-  "LinkedIn Logo",
+  "Facebook Mark",
+  "GitHub Mark",
+  "LinkedIn Mark",
+  "TypeScript Mark",
+  "Snowpack Mark",
+  "Formik Mark",
 ];
 
 const IconList = () => (
