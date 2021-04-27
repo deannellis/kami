@@ -11,13 +11,16 @@
 
 .landing-page__intro {
   background: var(--main-accent-color);
-  color: var(--background-color--secondary);
+  color: var(--button-text-color--primary);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: var(--l-size) 0 var(--xl-size);
   ul {
-    line-height: $leading-relaxed;
+    line-height: $leading-loose;
+  }
+  h1 {
+    color: var(--button-text-color--primary);
   }
 }
