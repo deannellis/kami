@@ -11,10 +11,10 @@ See what components come with kami in the [project Storybook](https://60876ffa51
 
 ## Installation and Startup
 
-Start by cloning the repo
+Start by forking the repo
 
 ```bash
-git clone git@github.com:deannellis/kami.git
+git fork git@github.com:deannellis/kami.git
 ```
 
 Install dependencies
